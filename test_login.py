@@ -15,3 +15,8 @@ def test_registration():
     driver = webdriver.Chrome()
     driver.get("https://www.facebook.com")
     print(driver.title)
+
+def test_registration():
+    driver = webdriver.Chrome()
+    driver.get("https://www.facebook.com")
+    print(driver.current_url)
