@@ -11,7 +11,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh '''
+                bat '''
                     python3 -m venv venv
                     . venv/bin/activate
                     pip install --upgrade pip
@@ -22,7 +22,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh '''
+                bat '''
                     . venv/bin/activate
                     pytest --html=report.html --self-contained-html
                 '''
